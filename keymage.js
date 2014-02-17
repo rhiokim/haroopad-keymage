@@ -4,7 +4,7 @@
 // (c) 2012 Alexander Solovyov
 // under terms of ISC License
 
-(function(define, undefined) {
+;(function(define, undefined) {
 define(function() {
     var VERSION = '1.0.1';
 
@@ -169,7 +169,7 @@ define(function() {
     var sequence = [];
     function dispatch(e) {
         // Skip all modifiers
-        if (~MODNUMS.indexOf(e.keyCode)) {
+        if (~MODNUMS.indexOf(e.keyCode) || e.altGraphKey) {
             return;
         }
 
